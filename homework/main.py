@@ -4,8 +4,8 @@
 # SDEV 300
 """This program allows a user to select one of two csv files and perform
 various histogram analysis for the datasets"""
-import matplotlib.pyplot as plt
 import re
+import matplotlib.pyplot as plt
 import pandas as pd
 
 
@@ -48,15 +48,15 @@ def get_choice_housing():
     return user_choice
 
 
-def trim_data_housing(df, col):
+def trim_data_housing(data_frame, col):
     """Trims outliers from the dataframe"""
-    index = df.index
+    index = data_frame.index
     if col == 'Pop Apr 1':
-        condition = df[col] >= 150_000
+        condition = data_frame[col] >= 150_000
     if col == 'AGE':
-        condition = df[col] <= 0
+        condition = data_frame[col] <= 0
     if col == 'UTILITY':
-        condition = df[col] >= 600
+        condition = data_frame[col] >= 600
     age_indices = index[condition]
     age_indices_list = age_indices.tolist()
     return age_indices_list
@@ -117,6 +117,7 @@ while True:  # runs as long as user would like to use program
         housing_frame = pd.read_csv('Housing.csv')
         housing_frame.drop(labels=trim_data_housing(housing_frame, 'AGE'),
                            axis=0, inplace=True)
+        # pylint: disable=E1101
         housing_frame.drop(labels=trim_data_housing(housing_frame, 'UTILITY'),
                            axis=0, inplace=True)
 

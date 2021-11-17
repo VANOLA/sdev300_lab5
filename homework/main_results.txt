@@ -1,0 +1,13 @@
+************* Module main
+main.py:98:22: E1136: Value 'pop_frame' is unsubscriptable (unsubscriptable-object)
+main.py:103:22: E1136: Value 'pop_frame' is unsubscriptable (unsubscriptable-object)
+main.py:108:22: E1136: Value 'pop_frame' is unsubscriptable (unsubscriptable-object)
+main.py:134:22: E1136: Value 'housing_frame' is unsubscriptable (unsubscriptable-object)
+main.py:140:22: E1136: Value 'housing_frame' is unsubscriptable (unsubscriptable-object)
+main.py:146:22: E1136: Value 'housing_frame' is unsubscriptable (unsubscriptable-object)
+main.py:152:22: E1136: Value 'housing_frame' is unsubscriptable (unsubscriptable-object)
+main.py:158:22: E1136: Value 'housing_frame' is unsubscriptable (unsubscriptable-object)
+
+------------------------------------------------------------------
+Your code has been rated at 6.49/10 (previous run: 6.05/10, +0.44)
+
